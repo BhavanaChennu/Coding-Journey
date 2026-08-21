@@ -4,14 +4,14 @@
 
 ## Problem
 
-### Worked Example - Convert Book Title to Lowercase
+### Converting Product Names to Lowercase for Storage
 
-In this example, we demonstrate how to use the toLowerCase() method to convert a book title to lowercase. This method ensures that the title of books are stored in a consistent format for validation and comparison.
+A retail system stores product names in a database, but users enter them in various cases. To maintain consistency, the system converts all product names to  **lowercase**  before storage.
 
- **When executed, the code will show:** 
+ **Expected Output:** 
 
 ```
-Lowercase Book: it ends with us
+Formatted Product Name: samsung galaxy phone
 
 ```
 
@@ -20,21 +20,24 @@ Lowercase Book: it ends with us
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:44:52.790Z  
+**Submitted:** 2026-08-21T11:46:11.237Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        // Declare and initialize the book name
-        String book = "It Ends With Us";
-
-        // Convert the book name to lowercase
-        String lowerBook = book.toLowerCase();
-
-        // Print the result
-        System.out.println("Lowercase Book: " + lowerBook);
+        
+        // Define a variable productName and its value 
+        String productName = "Samsung GALAXY Phone";
+        
+        // Use toLowerCase() method to print the product name in lowercase for storage
+        String formatted = productName.toLowerCase();
+        
+        // Print the desired results
+        System.out.println("Formatted Product Name: "+ formatted);
+        
     }
 }
+
 ```
 
 ---
