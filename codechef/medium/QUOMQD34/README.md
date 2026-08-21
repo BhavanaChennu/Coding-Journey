@@ -4,36 +4,42 @@
 
 ## Problem
 
-### Checking for the Last Occurrence of a Substring
+### Searching for the Last Dot in a File Path
 
-In this example, we demonstrate how to use the `lastIndexOf()` method to find the last occurrence of a substring within a string. This method helps identify the position of the last occurrence of a substring, searching from the end of the string.
-
- **When executed, the code will show:** 
+Complete the program by filling in the missing parts to find the last occurrence of a dot (`.`) in a file path using the `lastIndexOf()` method. This will help locate the file extension or other important information from the file path.
 
 ```
-The last occurrence of 'Error' is at index: 23
+String filePath = "C:\\Users\\Documents\\myFile.java";
 
 ```
+
+ **Expected Output:** 
+
+```
+The last dot is at index: 25
+
+```
+
+ **If you think the answer is 28, that’s incorrect, because as we studied in escape sequences, // is treated as a single character.**
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:19:20.958Z  
+**Submitted:** 2026-08-21T11:20:12.936Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        
-        // This is the log message where we want to search for the substring "Error"
-        String log = "Error: File not found. Error: Permission denied.";
+        // Define a filePath string
+        String filePath = "C:\\Users\\Documents\\myFile.java";
 
-        // This method searches for the substring starting from the end of the string and moves backward
-        int lastIndexOfError = log.lastIndexOf("Error");
+        // Find the last occurrence of the dot
+        int lastIndexOfDot = filePath.lastIndexOf("."); // your code here
 
-        // Display the index of the last occurrence of the substring "Error"
-        System.out.println("The last occurrence of 'Error' is at index: " + lastIndexOfError);
+        // Print the result
+        System.out.println("The last dot is at index: " + lastIndexOfDot);
 
     }
 }
