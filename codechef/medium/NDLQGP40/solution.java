@@ -1,34 +1,35 @@
 class Codechef {
     public static void main(String[] args) {
-
-        String weightStr = "70";
-        String heightStr = "1.75";
-        String showSummaryStr = "true";
-        int userId = 101;
-        char gender = 'M';
         
-        // Convert Strings to appropriate data types
-        int weight = Integer.parseInt(weightStr);
-        double height = Double.parseDouble(heightStr);
-        boolean showSummary = Boolean.parseBoolean(showSummaryStr);
+        String principalStr = "5000";     // principal amount in rupees
+        String rateStr = "5.5";           // annual interest rate in percent
+        String timeStr = "2";             // time period in years
+        int customerId = 202;             // customer ID (int)
+        char accountType = 'S';           // account type: S = Savings, C = Current
+
+
+        // Convert string inputs to appropriate data types
+        int principal = Integer.parseInt(principalStr);
+        double rate = Double.parseDouble(rateStr);
+        int time = Integer.parseInt(timeStr);
 
 
 
-        // Convert int and char to String
-        String userIdStr = String.valueOf(userId);
-        String genderStr = Character.toString(gender);
+        // Calculate Simple Interest
+        double simpleInterest = (principal * rate * time) / 100;
 
+        // Convert other values to strings for display
+        String customerIdStr = String.valueOf(customerId);
+        String accountTypeStr = Character.toString(accountType);
 
-        // Calculate BMI
-        double bmi = weight / (height * height); 
 
         // Print the results
-        System.out.println("The integer value is: " + weight);
-        System.out.println("The value of height is: " + height);
-        System.out.println("The boolean value is: " + showSummary);
-        System.out.println("The user ID as a string is: " + userIdStr);
-        System.out.println("The gender as a string is: " + genderStr);
-        System.out.println("Your BMI is: " + bmi);
+        System.out.println("Principal amount is: " + principal);
+        System.out.println("Interest rate is: " + rate + "%");
+        System.out.println("Time period is: " + time + " years");
+        System.out.println("Customer ID as string: " + customerIdStr);
+        System.out.println("Account type as string: " + accountTypeStr);
+        System.out.println("Calculated Simple Interest is: " + simpleInterest);
+        
     }
-
 }
