@@ -1,12 +1,14 @@
 class Codechef {
     public static void main(String[] args) {
         // Define a string
-        String sentence = "Learning Java is fun. Java is powerful.";
+        String word = "unhappy";
 
-        // Find the first occurrence of the word "Java" using indexOf()
-        int firstIndexOfJava = sentence.indexOf("Java");// Your code here
+        // Check if the word starts with the prefix "un"
+        int prefixIndex = word.indexOf("un");
+        boolean startsWithUn = prefixIndex == (word.indexOf("un"));
 
         // Print the result
-        System.out.println("The first occurrence of 'Java' is at index: " + firstIndexOfJava);
+        System.out.println("Does the word start with 'un'? "+startsWithUn);
+
     }
 }
