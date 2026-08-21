@@ -4,25 +4,25 @@
 
 ## Problem
 
-### Simple BMI Calculator
+### Simple Interest Calculator
 
-You are building a  **Basic BMI Calculator**  in Java for an e-commerce health platform.
-All data is  **predefined as Strings**, as if it was received from an online form.
+You are building a  **Simple Interest Calculator**  in Java.
+The values for principal, rate, and time are given as  **strings**, like input collected from a user form.
 
-### Task:
-- Converts values to appropriate types: weightStr → int using Integer.parseInt() heightStr → double using Double.parseDouble() showSummaryStr → boolean using Boolean.parseBoolean()
-- Calculates BMI: BMI = weight / (height * height)
-- Displays the result using conversions: int → String with String.valueOf() char → String with Character.toString()
-
- **Expected Output:** 
+### Tasks:
+- Convert: principalStr to int using Integer.parseInt() rateStr to double using Double.parseDouble() timeStr to int using Integer.parseInt()
+- Calculate Simple Interest using the formula: SI = (Principal × Rate × Time) / 100
+- Convert customerId and accountType to Strings using: String.valueOf() for int Character.toString() for char
+- Print all values and the final interest.
+### Example Output:
 
 ```
-The integer value is: 70
-The value of height is: 1.75
-The boolean value is: true
-The user ID as a string is: 101
-The gender as a string is: M
-Your BMI is: 22.857142857142858
+Principal amount is: 5000
+Interest rate is: 5.5%
+Time period is: 2 years
+Customer ID as string: 202
+Account type as string: S
+Calculated Simple Interest is: 550.0
 
 ```
 
@@ -31,44 +31,44 @@ Your BMI is: 22.857142857142858
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T12:56:30.996Z  
+**Submitted:** 2026-08-21T12:59:30.615Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-
-        String weightStr = "70";
-        String heightStr = "1.75";
-        String showSummaryStr = "true";
-        int userId = 101;
-        char gender = 'M';
         
-        // Convert Strings to appropriate data types
-        int weight = Integer.parseInt(weightStr);
-        double height = Double.parseDouble(heightStr);
-        boolean showSummary = Boolean.parseBoolean(showSummaryStr);
+        String principalStr = "5000";     // principal amount in rupees
+        String rateStr = "5.5";           // annual interest rate in percent
+        String timeStr = "2";             // time period in years
+        int customerId = 202;             // customer ID (int)
+        char accountType = 'S';           // account type: S = Savings, C = Current
+
+
+        // Convert string inputs to appropriate data types
+        int principal = Integer.parseInt(principalStr);
+        double rate = Double.parseDouble(rateStr);
+        int time = Integer.parseInt(timeStr);
 
 
 
-        // Convert int and char to String
-        String userIdStr = String.valueOf(userId);
-        String genderStr = Character.toString(gender);
+        // Calculate Simple Interest
+        double simpleInterest = (principal * rate * time) / 100;
 
+        // Convert other values to strings for display
+        String customerIdStr = String.valueOf(customerId);
+        String accountTypeStr = Character.toString(accountType);
 
-        // Calculate BMI
-        double bmi = weight / (height * height); 
 
         // Print the results
-        System.out.println("The integer value is: " + weight);
-        System.out.println("The value of height is: " + height);
-        System.out.println("The boolean value is: " + showSummary);
-        System.out.println("The user ID as a string is: " + userIdStr);
-        System.out.println("The gender as a string is: " + genderStr);
-        System.out.println("Your BMI is: " + bmi);
+        System.out.println("Principal amount is: " + principal);
+        System.out.println("Interest rate is: " + rate + "%");
+        System.out.println("Time period is: " + time + " years");
+        System.out.println("Customer ID as string: " + customerIdStr);
+        System.out.println("Account type as string: " + accountTypeStr);
+        System.out.println("Calculated Simple Interest is: " + simpleInterest);
+        
     }
-
 }
-
 ```
 
 ---
