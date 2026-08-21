@@ -4,16 +4,19 @@
 
 ## Problem
 
-### Finding the First Appearance of a Word
+### Verify Prefix
 
-Complete the program by filling in the missing part to find the first occurrence of a specific word in a sentence using the `indexOf()` method. This method helps locate the position of a word within a larger string.
+Write a program to check if a word starts with a given prefix. Define a string variable containing a word, and check whether it starts with the prefix `"un"`. Use the `indexOf()` method to determine the position of the prefix and print the result accordingly.
 
-Find the index of the first occurrence of `'Java'`.
+```
+String word = "unhappy";
+
+```
 
  **Expected Output:** 
 
 ```
-The first occurrence of 'Java' is at index: 9
+Does the word start with 'un'? true
 
 ```
 
@@ -22,21 +25,24 @@ The first occurrence of 'Java' is at index: 9
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:15:33.254Z  
+**Submitted:** 2026-08-21T11:18:21.242Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
         // Define a string
-        String sentence = "Learning Java is fun. Java is powerful.";
+        String word = "unhappy";
 
-        // Find the first occurrence of the word "Java" using indexOf()
-        int firstIndexOfJava = sentence.indexOf("Java");// Your code here
+        // Check if the word starts with the prefix "un"
+        int prefixIndex = word.indexOf("un");
+        boolean startsWithUn = prefixIndex == (word.indexOf("un"));
 
         // Print the result
-        System.out.println("The first occurrence of 'Java' is at index: " + firstIndexOfJava);
+        System.out.println("Does the word start with 'un'? "+startsWithUn);
+
     }
 }
+
 ```
 
 ---
