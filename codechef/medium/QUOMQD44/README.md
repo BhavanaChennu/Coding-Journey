@@ -4,15 +4,17 @@
 
 ## Problem
 
-### Validating Country Code of a Phone Number
+### URL Protocol Checker
 
-In this example, we demonstrate how to declare a String variable, check if it starts with a specific prefix using the `startsWith()` method, and print the result in Java.
-The `startsWith()` method allows us to efficiently verify the beginning of a string.
+Complete the program by filling in the missing parts to check if a URL starts with specific protocols (`http://, https://, ftp://`) using the `startsWith()` method.
+This will help understand how to identify different types of URLs efficiently.
 
- **When executed, the code will show:** 
+ **Expected Output:** 
 
 ```
-true
+URL starts with 'http://': false  
+URL starts with 'https://': true  
+URL starts with 'ftp://': false  
 
 ```
 
@@ -21,17 +23,29 @@ true
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:31:14.708Z  
+**Submitted:** 2026-08-21T11:32:39.517Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        // Declare and initialize a string variable to store the phone number
-        String phoneNumber = "+91-9876543210";
+        // Define a string variable to store the URL to be checked
+        String url = "https://www.example.com";
+        
+        // Check if the URL starts with "http://"
+        boolean isHttp = url.startsWith("http://");
+        
+        // Check if the URL starts with "https://"
+        boolean isHttps = url.startsWith("https://");
 
-        // Use the startsWith() method to check if the phone number begins with the country code "+91"
-        // The method returns true if it starts with "+91", otherwise it returns false
-        System.out.println(phoneNumber.startsWith("+91")); 
+        
+        // Check if the URL starts with "ftp://"
+        boolean isFtp = url.startsWith("ftp://");
+
+        
+        // Print the results for each protocol check
+        System.out.println("URL starts with 'http://': " + isHttp);  // Output: false
+        System.out.println("URL starts with 'https://': " + isHttps); // Output: true
+        System.out.println("URL starts with 'ftp://': " + isFtp);    // Output: false
     }
 }
 
