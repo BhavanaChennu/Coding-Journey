@@ -4,25 +4,34 @@
 
 ## Problem
 
-### Flight Ticket Formatter using join() Method
+### Generating a Unique Order Reference Code
 
-In this example, we demonstrate how an airline ticketing system can use the `join()` method to format and display flight details in a structured way.
-
- **When executed, the code will show:** 
+An e-commerce system assigns a unique order reference code for each transaction. Complete the missing part of the code using the join() method in Java to generate the correct order reference.
 
 ```
-Flight Details: From: New York | To: London | Timings: 00:13 am
+class Codechef {
+    public static void main(String[] args) {
+        String customerID = "C12345";
+        String orderNumber = "ORD6789";
+        String productCategory = "Electronics";
+        String orderDate = "2025-03-12";
+        
+        String orderReference = ____________ ; // Join elements with "hyphen (-)"
+
+        System.out.println("Order Reference: " + orderReference);
+    }
+}
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T12:37:07.428Z  
+**Submitted:** 2026-08-21T12:38:10.949Z  
 
-```java
+```cpp
 class Codechef{
     public static void main(String[] args) {
 
