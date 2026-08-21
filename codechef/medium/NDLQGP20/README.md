@@ -4,24 +4,25 @@
 
 ## Problem
 
-### Replacing Special Characters in String Using Java
+### Encrypting a Secret Message
 
-A text processing system replaces special characters in strings for better readability.
+A secure messaging application encrypts user messages by replacing specific characters with predefined codes. This ensures that sensitive information remains hidden while transmitting messages over a network.
 
 ```
-String subjectName = "Mathematics@Physics@Chemistry";
+String secretMessage = "Access Denied. Try Again!";
 
 ```
 
  **Steps to Complete:** 
 
-- Use the replace() method to replace @ with _.
-- Display the desired results.
+- Replace certain characters with secret codes to create a basic encryption method: Replace 'A' with "@" Replace 'a' with "6". Replace 'e' with "3". Replace 'i' with "!".
+- Print the original message and encrypted message.
 
  **Expected Output:** 
 
 ```
-Modified subject name: Mathematics_Physics_Chemistry
+Original Message: [Access Denied. Try Again!]  
+Encrypted Message: [@cc3ss D3n!3d. Try @g6!n!]  
 
 ```
 
@@ -30,20 +31,28 @@ Modified subject name: Mathematics_Physics_Chemistry
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:56:16.566Z  
+**Submitted:** 2026-08-21T11:58:16.099Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        
-        // Define a variable named subjectName and provide it a value.
-        String subjectName = "Mathematics@Physics@Chemistry";
-        
-        // Use replace() method to replace '@' with '_'
-        String afterReplace = subjectName.replace('@' , '_') ;       
+        // Define a secret message
+        String secretMessage = "Access Denied. Try Again!";
 
-        // Print the desired results
-        System.out.println("Modified subject name: "+afterReplace);
+        // Encrypt the message by replacing characters with codes
+        String encryptedMessage = secretMessage.replace('A' , '@').replace('a','6').
+        replace('e','3').replace('i','!');
+        
+
+
+
+       
+        // Print the original message
+        System.out.println("Original Message: [" + secretMessage + "]");
+        
+        // Print the encrypted message
+        System.out.println("Encrypted Message: [" + encryptedMessage + "]");
+
     }
 }
 
