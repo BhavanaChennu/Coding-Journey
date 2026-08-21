@@ -4,15 +4,25 @@
 
 ## Problem
 
-### Worked Example - Processing Product Pricing
+### Simple BMI Calculator
 
-In this example, we demonstrate how to convert a String price input to a numeric value, apply a discount, and convert it back to a String for display.
+You are building a  **Basic BMI Calculator**  in Java for an e-commerce health platform.
+All data is  **predefined as Strings**, as if it was received from an online form.
 
- **When executed, the code will show:** 
+### Task:
+- Converts values to appropriate types: weightStr → int using Integer.parseInt() heightStr → double using Double.parseDouble() showSummaryStr → boolean using Boolean.parseBoolean()
+- Calculates BMI: BMI = weight / (height * height)
+- Displays the result using conversions: int → String with String.valueOf() char → String with Character.toString()
+
+ **Expected Output:** 
 
 ```
-Original Price: $120.50  
-Discounted Price: $108.45  
+The integer value is: 70
+The value of height is: 1.75
+The boolean value is: true
+The user ID as a string is: 101
+The gender as a string is: M
+Your BMI is: 22.857142857142858
 
 ```
 
@@ -21,27 +31,42 @@ Discounted Price: $108.45
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T12:48:43.990Z  
+**Submitted:** 2026-08-21T12:56:18.193Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        // Declare a product price as a String
-        String priceStr = "120.50";
 
-        // Convert the String price to a double for calculations
-        double price = Double.parseDouble(priceStr);
+        String weightStr = "70";
+        String heightStr = "1.75";
+        String showSummaryStr = "true";
+        int userId = 101;
+        char gender = 'M';
+        
+        // Convert Strings to appropriate data types
+        int weight = Integer.parseInt(weightStr);
+        double height = Double.parseDouble(heightStr);
+        boolean showSummary = Boolean.parseBoolean(showSummaryStr);
 
-        // Apply a 10% discount
-        double discountedPrice = price * 0.90;
 
-        // Convert the final price back to String
-        String finalPriceStr = String.valueOf(discountedPrice);
 
-        // Print the original and discounted prices
-        System.out.println("Original Price: $" + priceStr);
-        System.out.println("Discounted Price: $" + finalPriceStr);
+        // Convert int and char to String
+        String userIdStr = String.valueOf(userId);
+        String genderStr = Character.toString(gender);
+
+
+        // Calculate BMI
+        double bmi = weight / (height * height); 
+
+        // Print the results
+        System.out.println("The integer value is: " + weight);
+        System.out.println("The value of height is: " + height);
+        System.out.println("The boolean value is: " + showSummary);
+        System.out.println("The user ID as a string is: " + userIdStr);
+        System.out.println("The gender as a string is: " + genderStr);
+        System.out.println("Your BMI is: " + bmi);
     }
+
 }
 
 ```
