@@ -1,13 +1,21 @@
 class Codechef {
     public static void main(String[] args) {
-        
-        // Define a variable named subjectName and provide it a value.
-        String subjectName = "Mathematics@Physics@Chemistry";
-        
-        // Use replace() method to replace '@' with '_'
-        String afterReplace = subjectName.replace('@' , '_') ;       
+        // Define a secret message
+        String secretMessage = "Access Denied. Try Again!";
 
-        // Print the desired results
-        System.out.println("Modified subject name: "+afterReplace);
+        // Encrypt the message by replacing characters with codes
+        String encryptedMessage = secretMessage.replace('A' , '@').replace('a','6').
+        replace('e','3').replace('i','!');
+        
+
+
+
+       
+        // Print the original message
+        System.out.println("Original Message: [" + secretMessage + "]");
+        
+        // Print the encrypted message
+        System.out.println("Encrypted Message: [" + encryptedMessage + "]");
+
     }
 }
