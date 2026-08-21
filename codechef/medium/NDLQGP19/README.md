@@ -4,15 +4,24 @@
 
 ## Problem
 
-### Worked Example - Formatting a Phone Number
+### Replacing Special Characters in String Using Java
 
-In this example, we demonstrate how to use the replace() method to format a phone number by replacing hyphens with spaces.
-
- **When executed, the code will show:** 
+A text processing system replaces special characters in strings for better readability.
 
 ```
-Original Phone Number: 987-654-3210  
-Formatted Phone Number: 987 654 3210
+String subjectName = "Mathematics@Physics@Chemistry";
+
+```
+
+ **Steps to Complete:** 
+
+- Use the replace() method to replace @ with _.
+- Display the desired results.
+
+ **Expected Output:** 
+
+```
+Modified subject name: Mathematics_Physics_Chemistry
 
 ```
 
@@ -21,21 +30,20 @@ Formatted Phone Number: 987 654 3210
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:55:03.430Z  
+**Submitted:** 2026-08-21T11:56:15.099Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
         
-        // Declare a phone number with hyphens
-        String phoneNumber = "987-654-3210";
+        // Define a variable named subjectName and provide it a value.
+        String subjectName = "Mathematics@Physics@Chemistry";
+        
+        // Use replace() method to replace '@' with '_'
+        String afterReplace = subjectName.replace('@' , '_') ;       
 
-        // Replace hyphens with spaces using replace() method
-        String formattedNumber = phoneNumber.replace('-', ' ');
-
-        // Print the original and formatted phone number
-        System.out.println("Original Phone Number: " + phoneNumber);
-        System.out.println("Formatted Phone Number: " + formattedNumber);
+        // Print the desired results
+        System.out.println("Modified subject name: "+afterReplace);
     }
 }
 
