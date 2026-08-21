@@ -4,43 +4,40 @@
 
 ## Problem
 
-### Searching for the Last Dot in a File Path
+### Extracting the Last Word in a Sentence
 
-Complete the program by filling in the missing parts to find the last occurrence of a dot (`.`) in a file path using the `lastIndexOf()` method. This will help locate the file extension or other important information from the file path.
-
-```
-String filePath = "C:\\Users\\Documents\\myFile.java";
-
-```
+Write a program to extract and display the last word of a given sentence.
+Define a string variable containing a sentence and extract the last word by finding the last space in the string.
+Use the `lastIndexOf()` and `substring()` methods to retrieve the last word and print the result.
 
  **Expected Output:** 
 
 ```
-The last dot is at index: 25
+The last word is: example.
 
 ```
-
- **If you think the answer is 28, that’s incorrect, because as we studied in escape sequences, // is treated as a single character.**
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:20:14.954Z  
+**Submitted:** 2026-08-21T11:24:29.397Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        // Define a filePath string
-        String filePath = "C:\\Users\\Documents\\myFile.java";
+        // Define a string
+        String text = "This is a simple example.";
 
-        // Find the last occurrence of the dot
-        int lastIndexOfDot = filePath.lastIndexOf("."); // your code here
+        // Find the last space in the string
+        int lastSpaceIndex = text.lastIndexOf(" ");
+
+        // Extract the last word
+        String lastWord = text.substring(lastSpaceIndex + 1);
 
         // Print the result
-        System.out.println("The last dot is at index: " + lastIndexOfDot);
-
+        System.out.println("The last word is: "+lastWord);
     }
 }
 
