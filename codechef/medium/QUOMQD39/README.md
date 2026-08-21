@@ -4,25 +4,28 @@
 
 ## Problem
 
-### Printing Based on Presence
+### Case Sensitivity
 
-In this example, we demonstrate how to declare a string variable, check for the presence of a substring using the `contains()` method, and print the result in Java. The `contains()` method returns a boolean value (`true or false`) based on whether the substring is found within the string.
-
- **When executed, the code will show:** 
+Consider the following code:
 
 ```
-Contains 'sky': true
+class Codechef {
+    public static void main(String[] args) {
+        String text = "Java is Fun!";
+        System.out.println(text.contains("java"));
+    }
+}
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:25:31.581Z  
+**Submitted:** 2026-08-21T11:26:49.207Z  
 
-```java
+```cpp
 class Codechef {
     public static void main(String[] args) {
         // Define and initialize a string variable
