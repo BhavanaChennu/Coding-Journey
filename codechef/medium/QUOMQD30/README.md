@@ -25,7 +25,7 @@ Does the word start with 'un'? true
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:18:21.242Z  
+**Submitted:** 2026-08-21T11:18:36.626Z  
 
 ```java
 class Codechef {
@@ -35,7 +35,7 @@ class Codechef {
 
         // Check if the word starts with the prefix "un"
         int prefixIndex = word.indexOf("un");
-        boolean startsWithUn = prefixIndex == (word.indexOf("un"));
+        boolean startsWithUn = (prefixIndex == (word.indexOf("un")));
 
         // Print the result
         System.out.println("Does the word start with 'un'? "+startsWithUn);
