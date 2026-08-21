@@ -4,14 +4,15 @@
 
 ## Problem
 
-### Converting Product Names to Lowercase for Storage
+### Worked Example - Formatting a Receipt Header
 
-A retail system stores product names in a database, but users enter them in various cases. To maintain consistency, the system converts all product names to  **lowercase**  before storage.
+In this example, we demonstrate how to format a receipt header in a billing system using the `trim()` method in Java.
 
- **Expected Output:** 
+ **When executed, the code will show:** 
 
 ```
-Formatted Product Name: samsung galaxy phone
+Original Header: [    BILLING RECEIPT    ]  
+Formatted Header: [BILLING RECEIPT]
 
 ```
 
@@ -20,24 +21,23 @@ Formatted Product Name: samsung galaxy phone
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:46:12.465Z  
+**Submitted:** 2026-08-21T11:51:00.351Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
         
-        // Define a variable productName and its value 
-        String productName = "Samsung GALAXY Phone";
-        
-        // Use toLowerCase() method to print the product name in lowercase for storage
-        String formatted = productName.toLowerCase();
-        
-        // Print the desired results
-        System.out.println("Formatted Product Name: "+ formatted);
-        
+        // Declare receipt header with extra spaces
+        String receiptHeader = "    BILLING RECEIPT    ";
+
+        // Trim spaces to format the header properly using trim() method
+        String formattedHeader = receiptHeader.trim();
+
+        // Print the original and formatted header
+        System.out.println("Original Header: [" + receiptHeader + "]");
+        System.out.println("Formatted Header: [" + formattedHeader + "]");
     }
 }
-
 ```
 
 ---
