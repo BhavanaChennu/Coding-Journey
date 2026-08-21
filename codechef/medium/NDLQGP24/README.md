@@ -4,26 +4,39 @@
 
 ## Problem
 
-### Worked Example - Standardizing Email Domains
+### Document Editor
 
-In this example, we demonstrate how to use the replace(CharSequence, CharSequence) method to standardize email domains in a user database.
+A document editor replaces certain phrases to make the text more formal. Complete the missing part of the code.
 
- **When executed, the code will show:** 
+- Replace "u" with "you"
 
 ```
-Original Email: user123@oldmail.com  
-Standardized Email: user123@newmail.com  
+class Codechef {
+    public static void main(String[] args) {
+        String message = "How are u doing?";
+        String formalMessage = __; // Replace "u" with "you"
+
+        System.out.println("Revised Message: " + formalMessage);
+    }
+}
+
+```
+
+ **Expected Output** 
+
+```
+How are you doing?
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:58:56.174Z  
+**Submitted:** 2026-08-21T11:59:22.125Z  
 
-```java
+```cpp
 class Codechef {
     public static void main(String[] args) {
         
