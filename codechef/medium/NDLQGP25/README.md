@@ -4,54 +4,37 @@
 
 ## Problem
 
-### Document Editor
+### Updating Product Descriptions
 
-A document editor replaces certain phrases to make the text more formal. Complete the missing part of the code.
+In an e-commerce platform, some product descriptions contain outdated or inconsistent terminology. Your task is to standardize the descriptions by:
 
-- Replace "u" with "you"
+- Replacing all occurrences of the word "colour" with "color".
+- Converting the final description to uppercase.
+- Printing the updated product description.
 
-```
-class Codechef {
-    public static void main(String[] args) {
-        String message = "How are u doing?";
-        String formalMessage = __; // Replace "u" with "you"
-
-        System.out.println("Revised Message: " + formalMessage);
-    }
-}
+ **Expected Output:** 
 
 ```
-
- **Expected Output** 
-
-```
-How are you doing?
+THIS SHIRT IS AVAILABLE IN MULTIPLE COLORS.
 
 ```
 
 ## Solution
 
-**Language:** C++  
+**Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:59:30.782Z  
+**Submitted:** 2026-08-21T12:00:53.899Z  
 
-```cpp
+```java
 class Codechef {
     public static void main(String[] args) {
         
-        // Declare an email address with an old domain
-        String email = "user123@oldmail.com";
-
-        // Replace the old domain with the new domain using replace(CharSequence, CharSequence)
-        String standardizedEmail = email.replace("oldmail.com", "newmail.com");
-
-        // Print the original and standardized email
-        System.out.println("Original Email: " + email);
-        System.out.println("Standardized Email: " + standardizedEmail);
+        String description = "This shirt is available in multiple colours.";
+        String modified = description.toUpperCase().replace("colour" , "color");
+        System.out.println(modified);
     }
 }
-
 ```
 
 ---
