@@ -4,25 +4,37 @@
 
 ## Problem
 
-### Worked Example - Converting Usernames to Uppercase
+### Library Management System
 
-In this example, we demonstrate how to use the toUpperCase() method to convert a username to uppercase. This method ensures that usernames are stored in a standardized format.
-
- **When executed, the code will show:** 
+A library system stores book titles in lowercase but needs to display them in uppercase. Complete the missing part of the code to convert the book title to uppercase.
 
 ```
-Uppercase Username: JOHN_DOE
+class Codechef {
+    public static void main(String[] args) {
+        String bookTitle = "java programming";
+        String upperBookTitle = _________; // Convert to uppercase
+
+        System.out.println("Book Title in Uppercase: " + upperBookTitle);
+    }
+}
+
+```
+
+ **Expected Output** 
+
+```
+Book Title in Uppercase: JAVA PROGRAMMING
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:35:51.082Z  
+**Submitted:** 2026-08-21T11:36:54.127Z  
 
-```java
+```cpp
 class Codechef {
     public static void main(String[] args) {
         // Declare and initialize a username
