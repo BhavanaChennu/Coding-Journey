@@ -4,14 +4,16 @@
 
 ## Problem
 
-### Verifying the Position of a Substring in a URL
+### Finding the First Appearance of a Word
 
-In this example, we demonstrate how to find the position of a substring within a string using the `indexOf()` method. This method is useful when you need to locate specific parts of a string.
+Complete the program by filling in the missing part to find the first occurrence of a specific word in a sentence using the `indexOf()` method. This method helps locate the position of a word within a larger string.
 
- **When executed, the code will show:** 
+Find the index of the first occurrence of `'Java'`.
+
+ **Expected Output:** 
 
 ```
-The index of 'www' is: 8
+The first occurrence of 'Java' is at index: 9
 
 ```
 
@@ -20,25 +22,21 @@ The index of 'www' is: 8
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:14:50.949Z  
+**Submitted:** 2026-08-21T11:15:31.518Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
-        
-        // This is the string where we will search for the substring "www"
-        String url = "https://www.example.com";
+        // Define a string
+        String sentence = "Learning Java is fun. Java is powerful.";
 
-        // The indexOf() method searches for the first occurrence of the substring "www"
-        // It returns the starting index of the substring in the string
-        // If "www" is not found, it will return -1
-        int indexOfWWW = url.indexOf("www");
+        // Find the first occurrence of the word "Java" using indexOf()
+        int firstIndexOfJava = sentence.indexOf("Java");// Your code here
 
-        // Display the index of the substring "www" or -1 if it is not found
-        System.out.println("The index of 'www' is: " + indexOfWWW);
+        // Print the result
+        System.out.println("The first occurrence of 'Java' is at index: " + firstIndexOfJava);
     }
 }
-
 ```
 
 ---
