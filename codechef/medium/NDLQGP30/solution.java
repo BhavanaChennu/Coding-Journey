@@ -1,15 +1,34 @@
 class Codechef {
     public static void main(String[] args) {
         
-        // Example log entry with multiple delimiters
-        String logEntry = "12:30";
+        // Pre-populated array of review strings
+        String[] reviews = {
+            "P1234:Great quality and fast delivery:5",
+            "P5678:Poor packaging but good product:4",
+            "P4321:Did not receive the item:1"
+        };
+        
+       // Parsing and printing each review individually without using a loop
 
-        // Use split() with multiple delimiters (Regex: [:;] means split at ':', ';')
-        String timestamp = logEntry.split("[:;]")[0]; // Extract first part
-        String minutes = logEntry.split("[:;]")[1];   // Extract second part
+       // Review 1
+        String[] parts1 = reviews[0].split(":");
+        System.out.println("Product ID: " + parts1[0]);
+        System.out.println("Review: " + parts1[1]);
+        System.out.println("Rating: " + parts1[2]);
+        System.out.println();
 
-        // Print extracted log components
-        System.out.println("Timestamp: " + timestamp);
-        System.out.println("Minutes: " + minutes);
+        // Review 2
+        String[] parts2 = reviews[1].split(":");
+        System.out.println("Product ID: " + parts2[0]);
+        System.out.println("Review: " + parts2[1]);
+        System.out.println("Rating: " + parts2[2]);
+        System.out.println();
+
+        // Review 3
+        String[] parts3 = reviews[2].split(":");
+        System.out.println("Product ID: " + parts3[0]);
+        System.out.println("Review: " + parts3[1]);
+        System.out.println("Rating: " + parts3[2]);
+        System.out.println();
     }
 }
