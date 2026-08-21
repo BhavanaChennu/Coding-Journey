@@ -4,20 +4,41 @@
 
 ## Problem
 
-### Splitting Text Data Using Multiple Delimiters
+### Parsing Customer Reviews in an E-Commerce Platform
 
-A data management system processes log entries from various sources. These logs contain timestamps separated by multiple separators.
+An e-commerce platform collects customer reviews for various products in the following format:
 
- **Steps to Complete:** 
+```
+"ProductID:ReviewText:Rating"
 
-- Use the split() method to split log entry using multiple delimiters (:, ;).
-- Display the desired results.
+```
+
+Each review is stored as a single string, where:
+
+- ProductID is a unique identifier for the product (e.g., "P1234")
+- ReviewText is the feedback from the customer (e.g., "Great quality and fast delivery")
+- Rating is a number between 1 and 5 (as a string)
+
+ **Task:** 
+Write a Java program that processes a pre-populated array of such review strings and performs the following actions:
+
+- Use the split() method to extract the ProductID, ReviewText, and Rating from each review.
+- Print each part in a clear format to match the expected output given below.
 
  **Expected Output:** 
 
 ```
-Timestamp: 12  
-Minutes: 30  
+Product ID: P1234
+Review: Great quality and fast delivery
+Rating: 5
+
+Product ID: P5678
+Review: Poor packaging but good product
+Rating: 4
+
+Product ID: P4321
+Review: Did not receive the item
+Rating: 1
 
 ```
 
@@ -26,24 +47,44 @@ Minutes: 30
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T12:31:43.382Z  
+**Submitted:** 2026-08-21T12:35:12.894Z  
 
 ```java
 class Codechef {
     public static void main(String[] args) {
         
-        // Example log entry with multiple delimiters
-        String logEntry = "12:30";
+        // Pre-populated array of review strings
+        String[] reviews = {
+            "P1234:Great quality and fast delivery:5",
+            "P5678:Poor packaging but good product:4",
+            "P4321:Did not receive the item:1"
+        };
+        
+       // Parsing and printing each review individually without using a loop
 
-        // Use split() with multiple delimiters (Regex: [:;] means split at ':', ';')
-        String timestamp = logEntry.split("[:;]")[0]; // Extract first part
-        String minutes = logEntry.split("[:;]")[1];   // Extract second part
+       // Review 1
+        String[] parts1 = reviews[0].split(":");
+        System.out.println("Product ID: " + parts1[0]);
+        System.out.println("Review: " + parts1[1]);
+        System.out.println("Rating: " + parts1[2]);
+        System.out.println();
 
-        // Print extracted log components
-        System.out.println("Timestamp: " + timestamp);
-        System.out.println("Minutes: " + minutes);
+        // Review 2
+        String[] parts2 = reviews[1].split(":");
+        System.out.println("Product ID: " + parts2[0]);
+        System.out.println("Review: " + parts2[1]);
+        System.out.println("Rating: " + parts2[2]);
+        System.out.println();
+
+        // Review 3
+        String[] parts3 = reviews[2].split(":");
+        System.out.println("Product ID: " + parts3[0]);
+        System.out.println("Review: " + parts3[1]);
+        System.out.println("Rating: " + parts3[2]);
+        System.out.println();
     }
 }
+
 ```
 
 ---
