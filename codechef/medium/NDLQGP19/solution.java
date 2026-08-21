@@ -1,14 +1,13 @@
 class Codechef {
     public static void main(String[] args) {
         
-        // Declare a phone number with hyphens
-        String phoneNumber = "987-654-3210";
+        // Define a variable named subjectName and provide it a value.
+        String subjectName = "Mathematics@Physics@Chemistry";
+        
+        // Use replace() method to replace '@' with '_'
+        String afterReplace = subjectName.replace('@' , '_') ;       
 
-        // Replace hyphens with spaces using replace() method
-        String formattedNumber = phoneNumber.replace('-', ' ');
-
-        // Print the original and formatted phone number
-        System.out.println("Original Phone Number: " + phoneNumber);
-        System.out.println("Formatted Phone Number: " + formattedNumber);
+        // Print the desired results
+        System.out.println("Modified subject name: "+afterReplace);
     }
 }
