@@ -4,28 +4,26 @@
 
 ## Problem
 
-### Case Sensitivity
+### Checking Domain in URLs
 
-What will be the output of the following code?
+In this example, we demonstrate how to check if a URL ends with a specific domain using the `endsWith()` method in Java.
+
+ **When executed, the code will show:** 
 
 ```
-class Codechef {
-    public static void main(String[] args) {
-        String fileName = "Report.PDF";
-        System.out.println(fileName.endsWith("pdf"));
-    }
-}
+Ends with '.com': true  
+Ends with '.org': false 
 
 ```
 
 ## Solution
 
-**Language:** C++  
+**Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T11:35:12.607Z  
+**Submitted:** 2026-08-21T11:35:00.943Z  
 
-```cpp
+```java
 class Codechef {
     public static void main(String[] args) {
 
