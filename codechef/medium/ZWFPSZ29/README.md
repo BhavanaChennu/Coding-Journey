@@ -4,34 +4,43 @@
 
 ## Problem
 
-### Case Conversion
+### replace() Method
 
-In this example, we demonstrate how to  **format user input**  by converting it to  **lowercase**  and  **uppercase**  using Java’s `toLowerCase()` and `toUpperCase()` methods.
-
-- The toLowerCase() method converts all characters in the string to lowercase.
-- The toUpperCase() method converts all characters in the string to uppercase.
-### Sample 1:
-Input
-Output
+How does the `replace()` method help in formatting user input?
 
 ```
-Java Programming
-```
+import java.util.Scanner;
+
+class Codechef {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        
+        String formattedInput = userInput.replace("-", "_");
+        
+        System.out.println("Formatted Output: " + formattedInput);
+        
+        scanner.close();
+    }
+}
 
 ```
-Lowercase: java programming  
-Uppercase: JAVA PROGRAMMING
+
+If the user enters:
+
+```
+Java-Programming
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-23T10:15:23.442Z  
+**Submitted:** 2026-08-23T10:16:10.674Z  
 
-```java
+```cpp
 import java.util.Scanner; 
 
 class Codechef {
