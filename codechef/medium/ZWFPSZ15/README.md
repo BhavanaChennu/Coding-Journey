@@ -4,60 +4,68 @@
 
 ## Problem
 
-### Storing a Single Character
+### Create a Simple User Profile
 
-A Java program needs to capture a single character entered by the user. What is the correct way to achieve this?
+Write a program to take user input for a username, a short biography, and the initial of their favorite color using Java’s Scanner class. The program will demonstrate reading different types of input effectively.
+
+ **Steps to Complete:** 
+
+- Read a single-word username using next().
+- Use nextLine() to read a full-line biography while handling input buffer issues.
+- Capture a single character representing the user's favorite color initial.
+- Display the user's profile information.
+### Sample 1:
+Input
+Output
 
 ```
-import java.util.Scanner;
-class Codechef {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+Alex  
+Passionate about coding and AI.  
+B 
+```
 
-        char character = scanner.______(); 
-
-        System.out.println("You entered: " + character);
-
-        scanner.close();
-    }
-}
-
+```
+User Profile:  
+Username: Alex  
+Bio: Passionate about coding and AI.  
+Favorite Color Initial: B  
 ```
 
 ## Solution
 
-**Language:** C++  
+**Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-23T10:03:03.027Z  
+**Submitted:** 2026-08-23T10:13:45.505Z  
 
-```cpp
-import java.util.Scanner; 
+```java
+import java.util.Scanner;
 
 class Codechef {
     public static void main(String[] args) {
         // Create a Scanner object to read input from the console
         Scanner scanner = new Scanner(System.in);
-        
-        // 'next()' method reads a single word as input
-        String firstName = scanner.next();
 
-        // Consume the newline character left in the input buffer after the previous input
+        // username input (a single word)
+        String username = scanner.next();
+
+        // Consume the leftover newline character from the input buffer after the previous input
         scanner.nextLine();
-        
-        // 'nextLine()' method reads an entire line of input until the Enter key is pressed
-        String fullName = scanner.nextLine();
 
-        // 'next().charAt(0)' retrieves the first character of the input
-        char favoriteLetter = scanner.next().charAt(0);
 
-        // Display the collected personal information
-        System.out.println("Personal Information:");
-        System.out.println("First Name: " + firstName); // Prints the first name
-        System.out.println("Full Name: " + fullName);   // Prints the full name
-        System.out.println("Favorite Letter: " + favoriteLetter); // Prints the favorite letter
+        // Line input (a full line, possibly containing spaces)
+        String bio = scanner.nextLine();
 
-        // Close the Scanner to release resources
+        // Character input
+        char colorInitial = scanner.next().charAt(0);
+
+        // Display the user's profile information
+        System.out.println("User Profile:");
+        System.out.println("Username: " + username);
+        System.out.println("Bio: " + bio); 
+        System.out.println("Favorite Color Initial: " + colorInitial); 
+
+        // Close the Scanner object to release system resources
         scanner.close();
     }
 }
