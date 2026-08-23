@@ -4,39 +4,29 @@
 
 ## Problem
 
-### Travel Booking Information
+### Exam Scores
 
-A travel booking system collects details from users, such as  **name, number of travelers, ticket price, luggage weight, and meal preference**. Complete the program by filling in the missing parts to ensure it correctly captures and displays travel booking details.
+Write a program to calculate the `total` and `average` score of three subjects: `Math`, `Science`, and `English`. This will help track a student's overall performance by combining multiple user inputs.
 
- **Input:** 
+ **Steps to Complete:** 
 
-- A String representing the traveler's name.
-- An int representing the number of travelers.
-- A double representing the ticket price per traveler.
-- A float representing the total luggage weight in kilograms.
-- A boolean representing whether meals are included.
-
-Run the code, enter different booking details, and verify that it correctly captures the travel information!
-
+- Read three different subject scores from the user.
+- Use arithmetic operations to calculate the total and average scores.
+- Display the results in a structured format.
 ### Sample 1:
 Input
 Output
 
 ```
-Alice Johnson  
-3  
-250.50  
-15.8  
-true 
+80
+90
+85
 ```
 
 ```
-Booking Information:
-Name: Alice Johnson
-Number of Travelers: 3
-Ticket Price per Traveler: $250.5
-Luggage Weight: 15.8 kg
-Meals Included: true
+Total Score: 255
+Average Score: 85.0
+
 ```
 
 ## Solution
@@ -44,40 +34,38 @@ Meals Included: true
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-23T10:22:45.624Z  
+**Submitted:** 2026-08-23T10:44:25.915Z  
 
 ```java
-import java.util.Scanner; 
+import java.util.Scanner; // Import the Scanner class to read user input
 
 class Codechef {
     public static void main(String[] args) {
         // Create a Scanner object to read input from the console
         Scanner scanner = new Scanner(System.in);
 
-        // Collect the traveler's name
-        String name = scanner.nextLine();
+        // Read the Math score from the user
+        int mathScore = scanner.nextInt();
 
-        // Collect the number of travelers
-        int numTravelers = scanner.nextInt();
+        // Read the Science score from the user
+        int scienceScore = scanner.nextInt();
 
-        // Collect the ticket price per traveler
-        double ticketPrice = scanner.nextDouble();
+        // Read the English score from the user
+        int englishScore = scanner.nextInt();
 
-        // Collect the total luggage weight in kilograms
-        float luggageWeight = scanner.nextFloat();
+        // Calculate the total score by adding the individual scores
+        int totalScore = mathScore + scienceScore + englishScore;
 
-        // Collect meal preference as a boolean (true/false)
-        boolean includeMeals = scanner.nextBoolean();
+        // Calculate the average score by dividing the total by the number of subjects using a 'Double'
+        double averageScore = totalScore/ 3.0;
 
-        // Display the travel booking details
-        System.out.println("Booking Information:");
-        System.out.println("Name: " + name); // Display traveler's name
-        System.out.println("Number of Travelers: " + numTravelers); // Display the number of travelers
-        System.out.println("Ticket Price per Traveler: $" + ticketPrice); // Display ticket price per traveler
-        System.out.println("Luggage Weight: " + luggageWeight + " kg"); // Display luggage weight
-        System.out.println("Meals Included: " + includeMeals); // Display meal inclusion status
+        // Print the total score
+        System.out.println("Total Score: "+totalScore);
 
-        // Close the Scanner object to release system resources
+        // Print the average score
+        System.out.println("Average Score: "+averageScore);
+
+        // Close the Scanner to release system resources
         scanner.close();
     }
 }
