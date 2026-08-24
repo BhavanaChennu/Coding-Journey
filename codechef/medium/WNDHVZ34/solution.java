@@ -1,17 +1,21 @@
 import java.util.*;
-// Program to check if a student has passed the exam
+
 class Codechef {
     public static void main(String[] args) {
-        int score = 75; // Student's score
-        int passingScore = 50; // Minimum score required to pass
-
-        // Check if the student's score is greater than or equal to the passing score
-        if (score >= passingScore) {
-            System.out.println("Congratulations! You passed the exam.");
+        
+        //Take user input
+        Scanner sc = new Scanner(System.in);
+        int studentScore=sc.nextInt();
+        int passingScore=sc.nextInt();
+        
+        // Checking if the student meets the scholarship criteria
+        if (studentScore >= passingScore) {  // Fill in the blank
+            System.out.println("Scholarship Granted!"); // Fill in the blank
         } else {
-            System.out.println("You did not pass. Better luck next time!");
+            System.out.println("Scholarship Denied!"); // Fill in the blank
         }
 
-        System.out.println("Result check completed.");
+        // Indicating that the evaluation process is complete
+        System.out.println("Evaluation completed.");
     }
 }
