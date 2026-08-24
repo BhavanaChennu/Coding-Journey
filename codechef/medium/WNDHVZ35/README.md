@@ -4,25 +4,29 @@
 
 ## Problem
 
-### Verifying Scholarship Eligibility
+### Senior Citizen Discount Check
 
-A university grants scholarships to students who achieve a minimum qualifying score in their entrance exam. The system checks whether the student's score meets or exceeds the required passing score. Complete the program by filling in the missing parts to ensure correct functionality.
+Write a program to determine if a person qualifies for a senior citizen movie ticket discount based on age.
+
+- If age >= 60, they get a senior discount.
+- Otherwise, they pay the full price, and the program calculates how many years remain until they qualify.
 
  **Input:** 
-Take input of studentScore and passingScore.
+A single integer representing the person's age.
 
 ### Sample 1:
 Input
 Output
 
 ```
-85
-80
+65
+
 ```
 
 ```
-Scholarship Granted!
-Evaluation completed.
+You are eligible for a senior citizen discount!
+Enjoy your discounted movie ticket.
+
 ```
 
 ### Sample 2:
@@ -30,27 +34,14 @@ Input
 Output
 
 ```
-80
-80
+50
+
 ```
 
 ```
-Scholarship Granted!
-Evaluation completed.
-```
+You are not eligible for a senior citizen discount.
+You need to wait 10 more years to qualify.
 
-### Sample 3:
-Input
-Output
-
-```
-75
-80
-```
-
-```
-Scholarship Denied!
-Evaluation completed.
 ```
 
 ## Solution
@@ -58,30 +49,36 @@ Evaluation completed.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T17:58:57.938Z  
+**Submitted:** 2026-08-24T18:00:03.571Z  
 
 ```java
 import java.util.*;
-
+// This class demonstrates the use of statements and semicolons in Java.
 class Codechef {
+
+    // The main method serves as the entry point for the program.
     public static void main(String[] args) {
         
-        //Take user input
-        Scanner sc = new Scanner(System.in);
-        int studentScore=sc.nextInt();
-        int passingScore=sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
         
-        // Checking if the student meets the scholarship criteria
-        if (studentScore >= passingScore) {  // Fill in the blank
-            System.out.println("Scholarship Granted!"); // Fill in the blank
+        // Taking age input from the user
+        int age = scanner.nextInt();
+        
+        int minSeniorAge = 60; // Minimum age required for discount
+        
+        // Checking eligibility for the discount
+        if (age >= minSeniorAge) {
+            System.out.println("You are eligible for a senior citizen discount!");
+            System.out.println("Enjoy your discounted movie ticket.");
         } else {
-            System.out.println("Scholarship Denied!"); // Fill in the blank
+            // Calculating how many more years are needed
+            int yearsLeft = minSeniorAge - age;
+            System.out.println("You are not eligible for a senior citizen discount.");
+            System.out.println("You need to wait " + yearsLeft + " more years to qualify.");
         }
-
-        // Indicating that the evaluation process is complete
-        System.out.println("Evaluation completed.");
     }
 }
+    
 ```
 
 ---
