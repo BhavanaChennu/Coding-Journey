@@ -4,16 +4,47 @@
 
 ## Problem
 
-### Worked Example - Library Late Fee Waiver
+### Emergency Access Verification
 
-In this example, we demonstrate how to use an if-else statement with the logical || (OR) operator to check if a library late fee can be waived. This method helps in understanding multiple conditions using or in Java.
+A security system grants emergency access to a restricted area if either the  **emergency keycode**  is entered correctly or the  **override code**  is used. Complete the program by filling in the missing parts to ensure the correct functionality.
 
- **When executed, the code will show:** 
+ **Input:** 
+Take enteredCode as input.
+
+### Sample 1:
+Input
+Output
 
 ```
-Your late fee is waived.  
-Library fee check completed.  
+4321
+```
 
+```
+Access Granted: Emergency Entry Allowed.
+```
+
+### Sample 2:
+Input
+Output
+
+```
+9999
+```
+
+```
+Access Granted: Emergency Entry Allowed.
+```
+
+### Sample 3:
+Input
+Output
+
+```
+1234
+```
+
+```
+Access Denied: Invalid Code.
 ```
 
 ## Solution
@@ -21,28 +52,30 @@ Library fee check completed.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T18:07:49.852Z  
+**Submitted:** 2026-08-24T18:08:24.514Z  
 
 ```java
 import java.util.*;
 
 class Codechef {
     public static void main(String[] args) {
-        // Variables representing waiver conditions
-        boolean isSeniorCitizen = false;
-        boolean hasMembership = true;
+        // Predefined emergency access codes
+        int emergencyKeycode = 4321;
+        int overrideCode = 9999;
 
-        // Check if the user qualifies for a late fee waiver
-        if (isSeniorCitizen || hasMembership) {
-            System.out.println("Your late fee is waived.");
+        // Take user input
+        Scanner sc= new Scanner(System.in);
+        int enteredCode=sc.nextInt();
+        
+        // Checking if the entered code matches either emergencyKeycode or overrideCode
+        if (enteredCode == emergencyKeycode || enteredCode == overrideCode) {
+            System.out.println("Access Granted: Emergency Entry Allowed.");
         } else {
-            System.out.println("You need to pay the late fee.");
+            System.out.println("Access Denied: Invalid Code.");
         }
 
-        System.out.println("Library fee check completed.");
     }
 }
-
 ```
 
 ---
