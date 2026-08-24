@@ -4,46 +4,49 @@
 
 ## Problem
 
-### Fill in the Blanks - Check if a Number is Positive
+### Discount Eligibility Checker
 
-Complete the following Java program by filling in the missing part so that it correctly checks if a number is  **positive**  and prints `"The number is positive."` when the condition is met.
+Write a program that takes the total purchase amount as input and checks if the customer is eligible for a discount.
+The program should use an if statement to print a message only if the purchase amount is 1000 or more; otherwise, nothing should be printed.
+
+ **Input:** 
+A single integer representing the total purchase amount.
+
+### Sample 1:
+Input
+Output
 
 ```
-import java.util.*;
-class Codechef {
-    public static void main(String[] args) {
-        int number = 15;
+1200
+```
 
-        if (_____) {  // Fill in the blank
-            System.out.println("The number is positive.");
-        }
-    }
-}
+```
+Congratulations! You are eligible for a discount.
 
 ```
 
 ## Solution
 
-**Language:** C++  
+**Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T16:36:33.111Z  
+**Submitted:** 2026-08-24T16:38:06.793Z  
 
-```cpp
+```java
 import java.util.*;
 
 class Codechef {
     public static void main(String[] args) {
-        int temperature = 102; // Example temperature
+        Scanner scanner = new Scanner(System.in);
 
-        // Check if the temperature is 100 or higher
-        if (temperature >= 100) {
-            // Print message if the water is boiling
-            System.out.println("The water is boiling!");
+        // Taking user input for purchase amount
+        int purchaseAmount = scanner.nextInt();
+
+        // Checking discount eligibility
+        if(purchaseAmount >= 1000){
+            System.out.println("Congratulations! You are eligible for a discount.");
         }
-
-        // Print message indicating the completion of the temperature check
-        System.out.println("Temperature check completed.");
+        scanner.close();
     }
 }
 
