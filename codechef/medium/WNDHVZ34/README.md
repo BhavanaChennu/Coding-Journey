@@ -4,16 +4,53 @@
 
 ## Problem
 
-### Worked Example - Exam Passing Criteria
+### Verifying Scholarship Eligibility
 
-In this example, we demonstrate how to use an if-else statement to check whether a student has passed an exam based on their score. This method helps understand conditional execution in Java.
+A university grants scholarships to students who achieve a minimum qualifying score in their entrance exam. The system checks whether the student's score meets or exceeds the required passing score. Complete the program by filling in the missing parts to ensure correct functionality.
 
- **When executed, the code will show:** 
+ **Input:** 
+Take input of studentScore and passingScore.
+
+### Sample 1:
+Input
+Output
 
 ```
-Congratulations! You passed the exam.  
-Result check completed.  
+85
+80
+```
 
+```
+Scholarship Granted!
+Evaluation completed.
+```
+
+### Sample 2:
+Input
+Output
+
+```
+80
+80
+```
+
+```
+Scholarship Granted!
+Evaluation completed.
+```
+
+### Sample 3:
+Input
+Output
+
+```
+75
+80
+```
+
+```
+Scholarship Denied!
+Evaluation completed.
 ```
 
 ## Solution
@@ -21,27 +58,30 @@ Result check completed.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T17:57:51.003Z  
+**Submitted:** 2026-08-24T17:58:54.345Z  
 
 ```java
 import java.util.*;
-// Program to check if a student has passed the exam
+
 class Codechef {
     public static void main(String[] args) {
-        int score = 75; // Student's score
-        int passingScore = 50; // Minimum score required to pass
-
-        // Check if the student's score is greater than or equal to the passing score
-        if (score >= passingScore) {
-            System.out.println("Congratulations! You passed the exam.");
+        
+        //Take user input
+        Scanner sc = new Scanner(System.in);
+        int studentScore=sc.nextInt();
+        int passingScore=sc.nextInt();
+        
+        // Checking if the student meets the scholarship criteria
+        if (studentScore >= passingScore) {  // Fill in the blank
+            System.out.println("Scholarship Granted!"); // Fill in the blank
         } else {
-            System.out.println("You did not pass. Better luck next time!");
+            System.out.println("Scholarship Denied!"); // Fill in the blank
         }
 
-        System.out.println("Result check completed.");
+        // Indicating that the evaluation process is complete
+        System.out.println("Evaluation completed.");
     }
 }
-
 ```
 
 ---
