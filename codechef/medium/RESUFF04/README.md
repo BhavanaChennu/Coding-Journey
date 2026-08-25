@@ -4,36 +4,25 @@
 
 ## Problem
 
-### Years of Experience
+### Greeting Based on Age Group
 
-What will be the output of the following Java program?
+In this example, we demonstrate how to use an  **if-else if**  statement to determine a person's age category based on a predefined  **age**  value. This method helps in understanding conditional execution in Java.
+
+ **When executed, the code will show:** 
 
 ```
-class Codechef {
-    public static void main(String[] args) {
-        int yearsOfExperience = 7;
-
-        if (yearsOfExperience > 10) {
-            System.out.println("Senior Employee");
-        } else if (yearsOfExperience >= 5) {
-            System.out.println("Mid-Level Employee");
-        } else {
-            System.out.println("Junior Employee");
-        }
-
-    }
-}
+You are a teenager.
 
 ```
 
 ## Solution
 
-**Language:** C++  
+**Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T18:12:45.647Z  
+**Submitted:** 2026-08-24T18:12:23.492Z  
 
-```cpp
+```java
 class Codechef {
     public static void main(String[] args) {
         // Initialize the variable 'age' with a predefined value of 16
