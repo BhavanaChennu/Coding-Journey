@@ -4,14 +4,48 @@
 
 ## Problem
 
-_Description not available._
+### What are test cases
+
+Listen
+
+In the previous problem - we wrote the program to accept 5 inputs on 5 separate lines.
+
+- What will we do if we expect 100 inputs or test cases?
+- What about 100,000 inputs or test cases?
+### Task
+
+Let's solve a simple problem.
+Write a program in the `IDE` which does the following:
+
+- Accepts the count of test cases - T - as an integer input given in the 1st line. This is followed by T lines - Each line contains an integer N.
+- For each test cases, prints out the integer N to console on a separate line (our Input mirror problem).
+### Sample 1:
+Input
+Output
+
+```
+3
+1
+22
+33
+```
+
+```
+1
+22
+33
+```
+
+### Explanation:
+
+Since the count of `test cases` is 3 -> we accept 3 inputs and print 3 outputs.
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T18:03:01.153Z  
+**Submitted:** 2026-08-26T18:04:28.184Z  
 
 ```java
 // Update the '_' in the code below
@@ -22,14 +56,18 @@ class Codechef
 	public static void main (String[] args)
 	{
         Scanner read = new Scanner(System.in);
+        // accept the count of test cases given in the 1st line
+        int t = read.nextInt();
         
-        String A = read.next();
-        String B = read.next();
-        String C = read.next();
-        String D = read.next();
-        String E = read.next();
-        // You can use "\n" to add a new line instead of adding multiple print statements
-        System.out.print(A + "\n" + B + "\n" + C + "\n" + D + "\n" + E );
+        // Run a loop to accept 't' inputs
+        for(int i=0; i<t; i++)
+        {
+            // accept an integer N in each test case
+            int n = read.nextInt();
+            // output the number mirror for each test case
+            // "println" prints output followed with a new line.
+            System.out.println(n);
+        }
 	}
 }
 ```
