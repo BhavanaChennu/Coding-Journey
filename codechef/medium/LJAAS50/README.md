@@ -4,20 +4,21 @@
 
 ## Problem
 
-### Area of circle
+### Print the sentence
 
-Write a program that takes the radius of a circle as input and prints its area. (use $\pi$ = 3.14)
+Write a program that takes the two different strings as input and prints them in a single line separated by spaces.
 
 ### Sample 1:
 Input
 Output
 
 ```
-5
+Code
+Chef
 ```
 
 ```
-78.5
+Code Chef
 ```
 
 ## Solution
@@ -25,20 +26,20 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T17:26:00.646Z  
+**Submitted:** 2026-08-26T17:28:17.474Z  
 
 ```java
 import java.util.Scanner;
+
 class Codechef
 {
 	public static void main (String[] args) 
 	{
 		// your code goes here
-		Scanner sc = new Scanner(System.in);
-		int radius = sc.nextInt();
-		double area = 3.14 * radius * radius;
-		System.out.println(area);
-        sc.close();
+        Scanner sc = new Scanner(System.in);
+        String input1 = sc.next();
+        String input2 = sc.next();
+        System.out.println(input1 + " " + input2);
 	}
 }
 
