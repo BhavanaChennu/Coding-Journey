@@ -4,18 +4,25 @@
 
 ## Problem
 
-### Rearrange Code
+### Multiple Choice Question
 
-You want to input two integers, and output their sum.
+What will the following code return as the output if the 1st line of input is 1 and the 2nd line of input is 2?
 
-Rearrange the code given, so that it does the above task.
+```
+Scanner read = new Scanner(System.in);
+String a = read.nextInt();
+String b = read.nextInt();
+String c = a + b;
+System.out.print(c);
+
+```
 
 ## Solution
 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T17:29:36.035Z  
+**Submitted:** 2026-08-26T17:30:13.019Z  
 
 ```cpp
 import java.util.Scanner; 
