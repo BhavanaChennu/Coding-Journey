@@ -4,20 +4,20 @@
 
 ## Problem
 
-### Debug this code
+### Rectify the error
 
-Rectify the error in the code. The program is supposed to take two integer inputs and print their division.
+Rectify the error in the code
 
 ### Sample 1:
 Input
 Output
 
 ```
-5 5
+CodeChef
 ```
 
 ```
-1
+f
 ```
 
 ## Solution
@@ -25,18 +25,19 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T17:22:19.873Z  
+**Submitted:** 2026-08-26T17:21:27.348Z  
 
 ```java
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int one = scanner.nextInt();
-        int two = scanner.nextInt();
-        System.out.println(one / two);
+        String name = scanner.next();
+        System.out.println(name.charAt(7));
     }
 }
+
+
 ```
 
 ---
