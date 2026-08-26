@@ -1,17 +1,15 @@
-//  Update the '_' in the code below
-import java.util.Scanner;
-
+// Click on submit to continue
 class Codechef
 {
 	public static void main (String[] args)
 	{
-        Scanner read = new Scanner(System.in);
-        
-        String A = read.next();
-        String B = read.next();
-        String C = read.next();
-        String D = read.next();
-        String E = read.next();
-        System.out.print(A + " " + B + " " + C + " " + D + " " + E );
+		int a = 5;
+		System.out.println(a);
+		
+		String b = "abcde";
+		System.out.println(b);
+		
+		int[] array = {1, 2, 3};
+		System.out.println(array[0] + " " + array[1] + " " + array[2]);
 	}
 }
