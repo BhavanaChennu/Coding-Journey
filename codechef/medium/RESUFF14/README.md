@@ -4,15 +4,54 @@
 
 ## Problem
 
-### Student Performance Evaluation
+### Grade Calculator with Honors
 
-In this example, we demonstrate how to use a  **nested if statement**  to evaluate a student's performance based on their marks. This method helps in understanding how hierarchical conditions work in Java.
+A hotel reservation system checks if a  **guest has a valid booking**  and assigns a room based on their selection. Complete the program by filling in the missing parts to ensure the correct functionality.
 
- **When executed, the code will show:** 
+ **Input:** 
+Take input for bookingStatus of type boolean and roomType of type String.
+
+### Sample 1:
+Input
+Output
 
 ```
-Excellent performance!  
+true
+Luxury
+```
 
+```
+Welcome to your Luxury Suite!  
+Reservation check completed.
+
+```
+
+### Sample 2:
+Input
+Output
+
+```
+true
+Standard
+```
+
+```
+Welcome to your Standard Room!
+Reservation check completed.
+```
+
+### Sample 3:
+Input
+Output
+
+```
+false
+Luxury
+```
+
+```
+Booking not found. Please check your details.
+Reservation check completed.
 ```
 
 ## Solution
@@ -20,27 +59,35 @@ Excellent performance!
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T17:02:38.177Z  
+**Submitted:** 2026-08-26T17:08:44.856Z  
 
 ```java
+import java.util.Scanner;
+
 class Codechef {
     public static void main(String[] args) {
-        // Initialize the variable 'marks' with a predefined value (87)
-        int marks = 87; 
+        
+        Scanner sc=new Scanner(System.in);
+        
+        boolean bookingStatus = sc.nextBoolean();
+        String roomType = sc.next();
 
-        // Outer 'if' statement checks if the marks are 60 or above
-        if (marks >= 60) { 
-            // Nested 'if' checks if the marks are 85 or above
-            if (marks >= 85) { 
-                System.out.println("Excellent performance!"); // Output message for marks 85 and above
-            } else { 
-                // If marks are between 60 and 84
-                System.out.println("Good performance. Keep it up!"); // Output message for marks 60 to 84
+        // Outer if condition checks if the booking is valid
+        if( bookingStatus ){
+            // Nested if condition checks the type of room
+            if( roomType.equals("Luxury")){
+                System.out.println("Welcome to your Luxury Suite!");
             }
-        } else { 
-            // If marks are less than 60
-            System.out.println("Needs improvement. Study harder!"); // Output message for marks below 60
+            else if(roomType.equals("Standard")){
+                System.out.println("Welcome to your Standard Room!");
+            }
         }
+        else {
+            System.out.println("Booking not found. Please check your details.");
+        }
+        // Indicating that the reservation check is completed
+        System.out.println("Reservation check completed.");
+        sc.close();
     }
 }
 
