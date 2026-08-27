@@ -86,7 +86,7 @@ Not eligible for gym entry.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T15:24:46.859Z  
+**Submitted:** 2026-08-27T15:25:33.312Z  
 
 ```java
 import java.util.Scanner;
@@ -101,7 +101,7 @@ class Codechef {
         boolean isBanned = sc.nextBoolean(); 
 
         // Check if the user has been banned
-        if(!hasMembershipCard){
+        if(isBanned){
             System.out.println("Not eligible for gym entry due to ban.");
         }
        // Check if the user is at least 18 years old and has a membership card
