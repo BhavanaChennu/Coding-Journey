@@ -53,7 +53,7 @@ Output for test case 2: 34 567 A1B2C3
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T18:09:36.958Z  
+**Submitted:** 2026-08-27T14:53:39.224Z  
 
 ```java
 // Update the '_' in the code below
