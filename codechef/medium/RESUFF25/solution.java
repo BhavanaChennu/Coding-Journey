@@ -10,7 +10,7 @@ class Codechef {
         boolean isBanned = sc.nextBoolean(); 
 
         // Check if the user has been banned
-        if(!hasMembershipCard){
+        if(isBanned){
             System.out.println("Not eligible for gym entry due to ban.");
         }
        // Check if the user is at least 18 years old and has a membership card
