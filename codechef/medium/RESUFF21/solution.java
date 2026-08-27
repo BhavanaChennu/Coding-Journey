@@ -9,8 +9,8 @@ class Codechef {
 
         // Use a ternary operator to calculate the grade based on marks
         // Check marks and assign grade as "A+", "A", "B", "C", or "Fail"
-        String grade = (marks >= 90)? "A+" : (marks >= 80) ? "A":
-        (marks >= 70 )? "B" : (marks >= 60) ? "C" :
+        String grade = (marks >= 90)? "A+" : (marks >= 80 && marks < 89) ? "A":
+        (marks >= 70 && marks < 79)? "B" : (marks >= 60 && marks < 69) ? "C" :
         "Fail";
  
 
