@@ -4,36 +4,29 @@
 
 ## Problem
 
-### Debug this code - Why is this code incorrect
+### String mirror - Double strings
 
 Listen
 
-So as you solve programming problems - you will need to debug and find errors in your own code.
+Write a program in the `IDE` which does the following
 
-### Task
-
-You are given a program which does the following
-
-- Accepts the count of test cases - t - in the 1st line The only line of each test case consists of an integer N
-- For each test case, output to the console the value that is double the integer N
-
-Can you try and  **debug / fix**  the error in the given program?
-
+- Accepts the count of test cases - t - in the 1st line First line of each test case consists of a string S
+- You need to perform the following operation Create a variable X which contains the string S concatenated with the string S Output X for each test case
 ### Sample 1:
 Input
 Output
 
 ```
 3
-1
-2
-3
+ab
+bc
+cd
 ```
 
 ```
-2
-4
-6
+abab
+bcbc
+cdcd
 ```
 
 ## Solution
@@ -41,10 +34,10 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T15:00:56.431Z  
+**Submitted:** 2026-08-27T14:59:48.985Z  
 
 ```java
-// Debug the following code to solve the problem
+// Update the '_' in the code below
 import java.util.Scanner;
 
 class Codechef
@@ -52,12 +45,16 @@ class Codechef
 	public static void main (String[] args)
 	{
         Scanner read = new Scanner(System.in);
-        int t = read.nextInt();
         
+        // accept the count of test cases given in the 1st line
+        int t = read.nextInt();
         for(int i=0; i<t; i++)
         {
-            int n = read.nextInt();
-            System.out.println(n*2);
+            String s = read.next();
+            // create a variable X which stores the value of string S concatenated with itself
+            String x = s + s;
+            // output the variable X
+            System.out.println(x);
         }
 	}
 }
