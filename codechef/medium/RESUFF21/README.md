@@ -52,7 +52,7 @@ The grade is: B
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T15:18:55.848Z  
+**Submitted:** 2026-08-27T15:18:04.473Z  
 
 ```java
 import java.util.Scanner; // Import Scanner class for taking input from the user
@@ -66,8 +66,8 @@ class Codechef {
 
         // Use a ternary operator to calculate the grade based on marks
         // Check marks and assign grade as "A+", "A", "B", "C", or "Fail"
-        String grade = (marks >= 90)? "A+" : (marks >= 80) ? "A":
-        (marks >= 70 )? "B" : (marks >= 60) ? "C" :
+        String grade = (marks >= 90)? "A+" : (marks >= 80 && marks < 89) ? "A":
+        (marks >= 70 && marks < 79)? "B" : (marks >= 60 && marks < 69) ? "C" :
         "Fail";
  
 
