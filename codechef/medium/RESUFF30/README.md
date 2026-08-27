@@ -4,96 +4,56 @@
 
 ## Problem
 
-### Weather Warning
+### Fruit Selector
 
-Write a Program to Check  **Weather Warning Based on Warning Level**. This program takes a weather warning level as input and provides advice based on the severity using a switch statement. The program assigns messages as follows:
-
-- Advisory for level 1.
-- Watch for level 2.
-- Warning for level 3.
-- Print "Stay safe." for all warning levels.
-
- **Input:** 
-A single  **integer**  representing the warning level (`1, 2, or 3`).
-
-### Sample 1:
-Input
-Output
+You are tasked with implementing a simple program that uses a  **switch statement**  to print the name of a fruit based on a given `fruitCode`.
 
 ```
-1
-```
+class Codechef {
+    public static void main(String[] args) {
+        int fruitCode = 2;
 
-```
-Advisory: Be cautious, weather may affect your plans.
-Watch: Conditions may escalate, stay alert.
-Warning: Severe weather expected, take precautions.
-Stay safe.
+        switch (fruitCode) {
+            case 1:
+                System.out.println("Apple");
+            case 2:
+                System.out.println("Banana");
+            case 3:
+                System.out.println("Cherry");
+        }
+    }
+}
 
-```
-
-### Sample 2:
-Input
-Output
-
-```
-2
-```
-
-```
-Watch: Conditions may escalate, stay alert.
-Warning: Severe weather expected, take precautions.
-Stay safe.
-
-```
-
-### Sample 3:
-Input
-Output
-
-```
-3
-```
-
-```
-Warning: Severe weather expected, take precautions.
-Stay safe.
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T15:28:52.346Z  
+**Submitted:** 2026-08-27T15:27:24.794Z  
 
-```java
-import java.util.Scanner; // Import Scanner class to take input from the user
-
+```cpp
 class Codechef {
     public static void main(String[] args) {
-        // Create a Scanner object for user input
-        Scanner scanner = new Scanner(System.in); 
+        // Initialize the variable 'time' to represent the time of day
+        // (1 for Breakfast, 2 for Lunch, 3 for Dinner)
+        int time = 2; 
 
-         // Read user input and store it in the 'warningLevel' variable
-        int warningLevel = scanner.nextInt();
+        // Use a switch statement to determine and print the meal recommendations
+        switch (time) {
+            case 1: // If 'time' equals 1
+                System.out.println("Breakfast is served from 7 AM to 10 AM.");
 
-        switch (warningLevel) {
-            case 1: 
-                System.out.println("Advisory: Be cautious, weather may affect your plans.");
+            case 2: // If 'time' equals 2
+                System.out.println("Lunch is available from 12 PM to 3 PM.");
 
-            case 2: 
-                System.out.println("Watch: Conditions may escalate, stay alert.");
-
-            case 3:
-                System.out.println("Warning: Severe weather expected, take precautions.");
-
-                System.out.println("Stay safe."); 
+            case 3: // If 'time' equals 3
+                System.out.println("Dinner is served from 6 PM to 9 PM.");
         }
-
-        scanner.close(); // Close the Scanner object to release resources
     }
 }
+
 ```
 
 ---
