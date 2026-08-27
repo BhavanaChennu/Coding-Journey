@@ -4,26 +4,36 @@
 
 ## Problem
 
-### Meal Recommendations Based on Time
+### Fruit Selector
 
-In this example, we demonstrate how to use a  **switch statement**  to determine the appropriate  **meal recommendation**  based on the time of day. The switch statement helps in providing different outputs depending on the value of the time variable.
-
- **When executed, the code will show:** 
+You are tasked with implementing a simple program that uses a  **switch statement**  to print the name of a fruit based on a given `fruitCode`.
 
 ```
-Lunch is available from 12 PM to 3 PM.
-Dinner is served from 6 PM to 9 PM.
+class Codechef {
+    public static void main(String[] args) {
+        int fruitCode = 2;
+
+        switch (fruitCode) {
+            case 1:
+                System.out.println("Apple");
+            case 2:
+                System.out.println("Banana");
+            case 3:
+                System.out.println("Cherry");
+        }
+    }
+}
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T15:26:43.859Z  
+**Submitted:** 2026-08-27T15:27:23.825Z  
 
-```java
+```cpp
 class Codechef {
     public static void main(String[] args) {
         // Initialize the variable 'time' to represent the time of day
