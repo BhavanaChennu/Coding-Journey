@@ -4,25 +4,36 @@
 
 ## Problem
 
-### Worked Example - While Loop with Break
+### MCQ - Guess the Correct Output
 
-In this example, we demonstrate how to use a  **while loop with a break statement**  to find the first  **multiple of 3**  within a given range. Once it finds the first multiple of 3, it will print the number and exit the loop immediately using `break`.
-
- **When executed, the code will show:** 
+What will be the output of the following Java program?
 
 ```
-First multiple of 3 found: 12
+class Codechef {
+    public static void main(String[] args) {
+        int num = 1;
+
+        while (num <= 7) {
+            if (num % 4 == 0) {
+                System.out.println("Terminated at: " + num);
+                break;
+            }
+            System.out.println("Processing: " + num);
+            num++;
+        }
+    }
+}
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-29T10:29:24.467Z  
+**Submitted:** 2026-08-29T10:31:31.068Z  
 
-```java
+```cpp
 class Codechef {
     public static void main(String[] args) {
         int num = 10; // Start checking from 10
