@@ -1,16 +1,17 @@
 class Codechef {
     public static void main(String[] args) {
-        int bakingTime = 4; // Initialize baking time in minutes
-
-        // Use a while loop to count down from 4 to 0
-        while (bakingTime > 0) {  // The loop runs as long as bakingTime is greater than 0
         
-            System.out.println("Time left: " + bakingTime + " minutes"); // Display remaining time
-            
-            bakingTime--;  // Decrease the time by 1 minute in each iteration
+        double fuel = 7.0; // Initialize fuel level
+
+        // Start while loop to monitor fuel
+        while ( fuel > 1.0 ) {    /* Fill in the missing condition */
+            System.out.println( "Fuel remaining: "+fuel +" liters.");    /* Print remaining fuel message */
+
+            // Reduce fuel by 1.0 liter
+            fuel--;    // Fill in the missing logic
         }
 
-        // Once the loop ends, display a message indicating baking is complete
-        System.out.println("Baking complete! Enjoy your cookies!");  
+        // Print low fuel warning
+        System.out.println("Warning! Only 1.0 liter of fuel left. Refuel soon!");  
     }
 }
