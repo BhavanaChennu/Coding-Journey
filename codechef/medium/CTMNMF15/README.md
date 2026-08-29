@@ -4,28 +4,45 @@
 
 ## Problem
 
-### Fuel Monitoring System
+### Water Tank Level Monitoring System
 
-A car's fuel level must be monitored to prevent it from running too low. Your task is to store the initial fuel amount (`in liters`) and decrement it by `1` liter at each step as the car drives, ensuring the fuel is tracked accurately.
+A building's water tank needs to be monitored to ensure it doesn’t run empty.
+The system should start with a user-defined water level (in liters) and decrease it by  **1 liter per cycle**  as water is used.
+The system should stop when the water level reaches  **10 liters**, prompting a  **refill alert**.
 
  **Steps to Complete:** 
 
-- Initialize a double variable fuel to represent the fuel level in liters.
-- Use a while loop to decrement the fuel level by 1 liter per iteration.
-- The loop should stop when the fuel level reaches 1.0 liters.
-- Print a message for each reduction in fuel, and alert the driver when only 1.0 liter remains.
-
- **Expected Output:** 
+- Ask the user to input the initial water level (in liters).
+- Store the input in a double variable called waterLevel.
+- Use a while loop to reduce the water level by 1 liter in each iteration.
+- When the water level reaches 10 liters, stop the loop and display a warning message asking to refill the tank.
+### Sample 1:
+Input
+Output
 
 ```
-Fuel remaining: 7.0 liters.
-Fuel remaining: 6.0 liters.
-Fuel remaining: 5.0 liters.
-Fuel remaining: 4.0 liters.
-Fuel remaining: 3.0 liters.
-Fuel remaining: 2.0 liters.
-Warning! Only 1.0 liter of fuel left. Refuel soon!
+15
+```
 
+```
+Water level: 15.0 liters.
+Water level: 14.0 liters.
+Water level: 13.0 liters.
+Water level: 12.0 liters.
+Water level: 11.0 liters.
+Warning! Water level is low (10 liters). Please refill the tank!
+```
+
+### Sample 2:
+Input
+Output
+
+```
+10
+```
+
+```
+Warning! Water level is low (10 liters). Please refill the tank!
 ```
 
 ## Solution
@@ -33,27 +50,31 @@ Warning! Only 1.0 liter of fuel left. Refuel soon!
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-29T10:02:04.102Z  
+**Submitted:** 2026-08-29T10:05:30.609Z  
 
 ```java
+import java.util.*;
+
 class Codechef {
     public static void main(String[] args) {
         
-        double fuel = 7.0; // Initialize fuel level
-
-        // Start while loop to monitor fuel
-        while ( fuel > 1.0 ) {    /* Fill in the missing condition */
-            System.out.println( "Fuel remaining: "+fuel +" liters.");    /* Print remaining fuel message */
-
-            // Reduce fuel by 1.0 liter
-            fuel--;    // Fill in the missing logic
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object for input
+        
+        // Ask the user to enter the initial water level
+        // Read the user input as a double value
+        double initial = scanner.nextDouble();
+        
+        // Start while loop to decrease water level
+        while(initial > 10.0){
+         System.out.println("Water level: "+initial+" liters."); 
+         initial--;
         }
-
-        // Print low fuel warning
-        System.out.println("Warning! Only 1.0 liter of fuel left. Refuel soon!");  
+        // Alert user when only 10 liters remain
+        System.out.println("Warning! Water level is low (10 liters). Please refill the tank!");
+        
+        scanner.close(); // Close the Scanner
     }
 }
-
 ```
 
 ---
