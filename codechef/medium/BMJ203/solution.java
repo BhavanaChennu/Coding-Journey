@@ -8,19 +8,14 @@ class Codechef
 		Scanner read = new Scanner(System.in);
 		
 		int t = read.nextInt();
-		for (int i=0; i<t; i++)
+		for(int i=0; i<t; i++)
 		{
-    		int a = read.nextInt();
-    		int b = read.nextInt();
+    		double a = read.nextInt();
+    		double b = read.nextInt();
     		
-    		// Difference of inputs
-    		int d = a - b;
-    		
-    		// Division of inputs.
-            int q = a / b;
-    		
-    		// print the desired output for each test case
-    		System.out.println(d + " " + q);
+    		// Division of A by B decimal result
+    		double x = a/b;
+    		System.out.println(x);
 		}
 	}
 }
