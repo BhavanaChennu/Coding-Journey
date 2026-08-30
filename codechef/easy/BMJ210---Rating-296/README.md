@@ -50,7 +50,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T15:36:42.119Z  
+**Submitted:** 2026-08-30T16:44:23.760Z  
 
 ```java
 // The code below is incorrect. Debug this code to solve the problem.
