@@ -39,35 +39,51 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T07:15:49.242Z  
+**Submitted:** 2026-09-02T07:15:58.139Z  
 
 ```java
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
-class Codechef {
-    public static void main (String[] args)  {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner scanner = new Scanner(System.in);
+
+        // Read the number of test cases
+        int t = scanner.nextInt();
+
+        // Process each test case
         while (t-- > 0) {
-            int n = sc.nextInt();
-            int arr[] = new int[n];
-              for (int i = 0; i < n; i++) {
-                arr[i] = sc.nextInt(); 
+            // Read the size of the array
+            int n = scanner.nextInt();
+
+            // Create an array to hold the elements
+            int[] arr = new int[n];
+
+            // Read the array elements
+            for (int i = 0; i < n; i++) {
+                arr[i] = scanner.nextInt();
             }
-            
-            int max = arr[0];
-            
+
+            // Find the maximum element
+            int maximum = arr[0];
             for (int i = 1; i < n; i++) {
-                if (arr[i] > max) {
-                    max = arr[i];
+                if (arr[i] > maximum) {
+                    maximum = arr[i];
                 }
             }
-            
-            System.out.println(max);
+
+            // Print the maximum element
+            System.out.println(maximum);
         }
-    }
+
+	}
 }
+
 ```
 
 ---
