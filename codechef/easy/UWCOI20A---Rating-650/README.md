@@ -39,39 +39,35 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T07:02:39.121Z  
+**Submitted:** 2026-09-02T07:15:49.242Z  
 
 ```java
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Scanner;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
+class Codechef {
+    public static void main (String[] args)  {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        int n = sc.nextInt();
-        int arr[] = new int[n];
         
-        for(int i = 0; i < n; i++){
-            arr[i] = sc.nextInt();
-        }
-        
-        int max = arr[0];
-        for(int i = 0 ; i < t; i++){
-            for(int j = 0; j < n; j++){
-                if( arr[j] > max)
-                     max = arr[j];
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int arr[] = new int[n];
+              for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextInt(); 
             }
+            
+            int max = arr[0];
+            
+            for (int i = 1; i < n; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            
+            System.out.println(max);
         }
-        System.out.println(max);
-        
-	}
+    }
 }
-
 ```
 
 ---
