@@ -39,7 +39,7 @@ Explanation: when we rotate 9 times, we'll get [3, 9, 1, 7] as resultant array.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-25T18:20:39.291Z  
+**Submitted:** 2026-09-07T10:28:26.743Z  
 
 ```java
 class Solution {
