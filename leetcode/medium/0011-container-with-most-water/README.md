@@ -42,9 +42,9 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-09-09T09:54:17.675Z  
+**Runtime:** 5 ms (beats 82.96%)  
+**Memory:** 77.3 MB (beats 49.05%)  
+**Submitted:** 2026-09-09T09:54:19.361Z  
 
 ```java
 import java.lang.Math;
